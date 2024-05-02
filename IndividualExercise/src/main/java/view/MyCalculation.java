@@ -469,19 +469,13 @@ public class MyCalculation extends javax.swing.JFrame {
 
         } else {
             try {
-                  myCalculation = new Calculation(Double.parseDouble(jTextFieldN1.getText()),Double.parseDouble(jTextFieldN2.getText()) );
+                myCalculation = new Calculation(Double.parseDouble(jTextFieldN1.getText()), Double.parseDouble(jTextFieldN2.getText()));
 
-                } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(panel, "Incorrect data entered");
-
-                }
-            String checkCalc = jTextFieldCalcu.getText();
-            if(checkCalc.equals("+") || checkCalc.equals("-")
-                   || checkCalc.equals("*") || checkCalc.equals("/") == false)
-            {
-               JOptionPane.showMessageDialog(panel, "Incorrect data entered");
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(panel, "Incorrect data entered");
 
             }
+
             if (jTextFieldCalcu.getText().equals("+")) {
                 try {
                     jTextFieldResults.setText(myCalculation.summation() + "");
@@ -492,7 +486,7 @@ public class MyCalculation extends javax.swing.JFrame {
                 }
             } else if (jTextFieldCalcu.getText().equals("-")) {
                 try {
-                    jTextFieldResults.setText(myCalculation.subtraction()+ "");
+                    jTextFieldResults.setText(myCalculation.subtraction() + "");
 
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(panel, "Incorrect data entered");
@@ -500,7 +494,7 @@ public class MyCalculation extends javax.swing.JFrame {
                 }
             } else if (jTextFieldCalcu.getText().equals("*")) {
                 try {
-                    jTextFieldResults.setText(myCalculation.multiplication()+ "");
+                    jTextFieldResults.setText(myCalculation.multiplication() + "");
 
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(panel, "Incorrect data entered");
@@ -511,12 +505,12 @@ public class MyCalculation extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(panel, "Cannot divide zero");
                 } else {
                     try {
-                    jTextFieldResults.setText(myCalculation.division()+ "");
+                        jTextFieldResults.setText(myCalculation.division() + "");
 
-                } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(panel, "Incorrect data entered");
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(panel, "Incorrect data entered");
 
-                }
+                    }
                 }
             }
         }
